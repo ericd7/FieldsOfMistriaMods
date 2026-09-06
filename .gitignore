@@ -1,0 +1,5 @@
+
+# Local copy of the Fields of Mistria game files, kept for reference
+# (unpacking assets.zip, checking vanilla TOML/sprites) without touching
+# the actual Steam install. Not our IP to redistribute, so never commit it.
+/game/
