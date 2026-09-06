@@ -6,14 +6,16 @@
 #     (verified against vanilla assets.zip: fiddle/infusions.toml). There is no
 #     equivalent data field for pickup radius, item drop radius, or light radius
 #     in this engine version, so those buffs are not implemented here.
-#   - `icon_sprite` reuses an existing vanilla ring sprite as a placeholder.
-#     Swap it for custom art (add a sprite under assets/animations/... and a
-#     matching .meta.toml, per the SDK's Sprites guide) whenever you're ready.
+#   - `icon_sprite` is our own copy of the vanilla Mistril Ring artwork
+#     (assets/animations/Item Icons/Player Equipment/spr_ui_item_equipment_wanderers_ring.png,
+#     with a freshly generated asset id in its .meta.toml so it doesn't collide
+#     with the original). It's a placeholder starting point — edit the PNG
+#     directly whenever you're ready for a distinct look.
 
 [wanderers_ring]
 	name = "Wanderer's Ring"
 	description = "A ring worn by those who cover a lot of ground. Equip for a permanent speed boost."
-	icon_sprite = "spr_ui_item_equipment_mistril_ring" # placeholder, replace with custom art
+	icon_sprite = "spr_ui_item_equipment_wanderers_ring"
 	tags = ["accessory", "armor", "wanderers_ring_set", "blacksmithing"]
 	default_infusion = "hasty"
 	crafting_level_requirement = 30
