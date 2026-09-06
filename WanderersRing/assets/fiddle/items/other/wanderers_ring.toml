@@ -1,0 +1,34 @@
+# Wanderer's Ring
+#
+# A craftable ring built around the game's real, data-driven capabilities:
+#   - `default_infusion = "hasty"` gives a permanent +4% movement speed while worn.
+#     This is the ONLY movement-speed source the item format actually supports
+#     (verified against vanilla assets.zip: fiddle/infusions.toml). There is no
+#     equivalent data field for pickup radius, item drop radius, or light radius
+#     in this engine version, so those buffs are not implemented here.
+#   - `icon_sprite` reuses an existing vanilla ring sprite as a placeholder.
+#     Swap it for custom art (add a sprite under assets/animations/... and a
+#     matching .meta.toml, per the SDK's Sprites guide) whenever you're ready.
+
+[wanderers_ring]
+	name = "Wanderer's Ring"
+	description = "A ring worn by those who cover a lot of ground. Equip for a permanent speed boost."
+	icon_sprite = "spr_ui_item_equipment_mistril_ring" # placeholder, replace with custom art
+	tags = ["accessory", "armor", "wanderers_ring_set", "blacksmithing"]
+	default_infusion = "hasty"
+	crafting_level_requirement = 30
+	value = { bin = "self.recipe * 1.1" }
+	recipe = [
+		{ hours = 0, minutes = 50 },
+		{ count = 4, item = "mistril_ingot" },
+		{ count = 1, item = "dragon_forged_core" },
+		{ count = 2, item = "ore_diamond" },
+	]
+
+[wanderers_ring_recipe_scroll]
+	name = "Wanderer's Ring Recipe Scroll"
+	description = "Use this scroll to unlock the crafting recipe for the Wanderer's Ring!"
+	icon_sprite = "spr_ui_item_craftingscroll" # generic scroll icon, reused as placeholder
+	soulbind = "forever"
+	set_unlock = "wanderers_ring_set"
+	tags = ["scroll", "blacklist_popup"]
