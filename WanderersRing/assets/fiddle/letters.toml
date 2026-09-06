@@ -1,0 +1,17 @@
+# Delivers the Wanderer's Ring recipe by mail once the player reaches floor 80
+# of the mines. Modeled directly on vanilla's own recipe-delivery letters
+# (e.g. [baked_potato_recipe] in the base game's letters.toml): `recipe_scroll`
+# here unlocks the named item's own crafting recipe directly, no separate
+# scroll item required.
+[wanderers_ring_recipe]
+	npc = "march"
+	requirements = { reached_mines_level = 80 }
+	items = [{ recipe_scroll = "wanderers_ring" }]
+	subject_line = "A Ring for the Road"
+	local = """[Ari],
+
+You've been putting in some serious hours down in the mines. Thought you could use something to help you cover ground faster.
+
+I've attached a recipe for a Wanderer's Ring. Should keep you light on your feet.
+
+March"""
