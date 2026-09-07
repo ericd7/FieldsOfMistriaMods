@@ -1,0 +1,18 @@
+# The blacksmithing crafting menu's categories are populated entirely from
+# hardcoded `manual_order` item-id lists (verified in CraftingMenu.gml), with
+# no tag-based auto-population, so a new item never appears there on its own.
+#
+# `[[categories]]` entries merge additively (confirmed empirically: shipping
+# the full vanilla file here duplicated every category). So rather than
+# reproducing vanilla's categories and appending our item to the existing
+# Armor list, we ship only a single new category containing our ring.
+[[categories]]
+	name = "Wanderer's Ring"
+	icon = "spr_ui_blacksmithing_category_icon_special"
+
+	[[categories.sub_categories]]
+		name = "Wanderer's Ring"
+		icon = "spr_ui_blacksmithing_category_icon_special"
+		manual_order = [
+			"wanderers_ring",
+		]

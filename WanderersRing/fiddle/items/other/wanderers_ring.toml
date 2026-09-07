@@ -20,6 +20,7 @@
 	description = "A ring worn by those who cover a lot of ground. Equip for a permanent speed boost."
 	icon_sprite = "spr_ui_item_equipment_wanderers_ring"
 	tags = ["accessory", "armor", "blacksmithing"]
+	defense = 12
 	default_infusion = "hasty"
 	crafting_level_requirement = 30
 	value = { bin = "self.recipe * 1.1" }
