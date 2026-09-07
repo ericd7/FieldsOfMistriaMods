@@ -3,3 +3,6 @@
 # (unpacking assets.zip, checking vanilla TOML/sprites) without touching
 # the actual Steam install. Not our IP to redistribute, so never commit it.
 /game/
+
+# Packaged mod zips for uploading to Nexus etc. -- build output, not source.
+/dist/

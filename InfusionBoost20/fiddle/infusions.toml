@@ -1,0 +1,106 @@
+# Stronger tier of the Infusion Boost rebalance: Hasty's new value is 20%
+# (rather than the base 4%), with every other infusion scaled by the same
+# 5x factor (20 / 4). This is a standalone alternative to ../InfusionBoost
+# and ../InfusionBoost50 -- install only ONE of these three, since they all
+# override the same fiddle/infusions.toml tables.
+#
+# Each table below is a FULL reproduction of its vanilla entry (verified
+# against the game's own assets.zip), with only the numeric field(s) and
+# description changed. Only the tables actually being changed are included;
+# every other infusion (Restorative, Magical, Likeable, Loveable, Fairy, and
+# the four unique craftable=false sword infusions) is left untouched.
+#
+# Lightweight is a drop-CHANCE (0-100 scale), so it's still safely below the
+# 100% cap at this tier (10 * 5 = 50).
+
+[fortified]
+	color = [239, 81, 62, 255]
+	name = "Fortified"
+	description = "Base HP is increased by +20."
+	amount = 20
+	required_perk = "fortified_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_fortified"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_fortified"
+	supported_tags = ["armor"]
+
+[hasty]
+	color = [240, 141, 46, 255]
+	name = "Hasty"
+	description = "Increases movement speed by 20%."
+	percentage = 0.20
+	required_perk = "hasty_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_hasty"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_hasty"
+	supported_tags = ["armor"]
+
+[tireless]
+	color = [96, 231, 65, 255]
+	name = "Tireless"
+	description = "Base Stamina is increased by +20."
+	amount = 20
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_tireless"
+	required_perk = "tireless_blacksmithing"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_tireless"
+	supported_tags = ["armor"]
+
+[sharp]
+	color = [255, 161, 210, 255]
+	name = "Sharp"
+	description = "Grants an additional +5 Attack Power."
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_sharp"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_sharp"
+	required_perk = "sharp_blacksmithing"
+	supported_tags = ["weapon"]
+	amount = 5
+
+[leeching]
+	color = [255, 161, 210, 255]
+	name = "Leeching"
+	description = "Restores 5 HP each time it's used to damage a Monster."
+	required_perk = "leech_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_leeching"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_leeching"
+	supported_tags = ["weapon"]
+	amount = 5
+
+[lightweight]
+	color = [77, 246, 221, 255]
+	name = "Lightweight"
+	description = "Tools with this infusion occasionally drop Stamina orbs on use."
+	percentage = 50
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_lightweight"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_lightweight"
+	required_perk = "lightweight_blacksmithing"
+	supported_tags = ["axe", "hoe", "net", "pick_axe", "shovel", "watering_can"]
+
+[quality]
+	color = [255, 161, 210, 255]
+	name = "Quality"
+	description = "This furniture has 50% of its regular value as a bonus to its sale price."
+	sub_icon = "spr_ui_item_sub_infusion_craft_quality"
+	required_perk = "quality_crafting"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_craft_quality"
+	supported_tags = ["furniture"]
+	amount = 50
+
+[speedy]
+	color = [240, 141, 46, 255]
+	name = "Speedy"
+	description = "Grants a +50% to movement speed for two hours."
+	duration_hours = 2
+	percentage = 1.50
+	required_perk = "speedy_cooking"
+	sub_icon = "spr_ui_item_sub_infusion_cook_speedy"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_cook_speedy"
+	supported_tags = ["food"]
+
+[stacking_speed]
+	color = [240, 141, 46, 255]
+	name = "Speedy"
+	description = "Increases your speed by 25% for 6 hours."
+	duration_hours = 6
+	amount = 0.25
+	required_perk = "speedy_cooking"
+	sub_icon = "spr_ui_item_sub_infusion_cook_speedy"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_cook_speedy"
+	supported_tags = ["food"]

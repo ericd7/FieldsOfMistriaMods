@@ -12,9 +12,15 @@ Mods for [Fields of Mistria](https://store.steampowered.com/app/2142790/Fields_o
 
 Adds a craftable Wanderer's Ring (blacksmithing) that grants a permanent movement-speed boost via the game's `hasty` infusion. The recipe is delivered by mail once the player reaches floor 80 of the mines.
 
-### [InfusionBoost](InfusionBoost)
+### [InfusionBoost](InfusionBoost) / [InfusionBoost20](InfusionBoost20) / [InfusionBoost50](InfusionBoost50)
 
-Static rebalance of the general-purpose craftable infusions (Hasty, Fortified, Tireless, Sharp, Leeching, Lightweight, Quality, Speedy, Stacking Speed) to roughly 2.5x their vanilla values. There's no in-game way to adjust these live — this mod *is* one fixed variant; a different strength would be a separate mod/manifest a player picks instead.
+Static rebalance of the general-purpose craftable infusions (Hasty, Fortified, Tireless, Sharp, Leeching, Lightweight, Quality, Speedy, Stacking Speed). There's no in-game way to adjust these live, so each folder is a separate, mutually-exclusive strength tier a player picks instead — install only one:
+
+- **InfusionBoost (+10)**: ~2.5x vanilla (Hasty 4% → 10%)
+- **InfusionBoost20 (+20)**: 5x vanilla (Hasty 4% → 20%)
+- **InfusionBoost50 (+50)**: 12.5x vanilla (Hasty 4% → 50%, Lightweight's drop chance capped at 100%)
+
+Packaged zips for upload live in `dist/` (gitignored, built from the mod folders — see below).
 
 ## Development notes
 
