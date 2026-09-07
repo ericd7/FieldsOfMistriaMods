@@ -1,0 +1,109 @@
+# Bumps every general-purpose, player-craftable infusion to a stronger value
+# (roughly 2.5x its vanilla number, matching Hasty going from 4% to 10%).
+#
+# Each table below is a FULL reproduction of its vanilla entry in
+# fiddle/infusions.toml (verified against the game's own assets.zip), with
+# only the numeric field(s) and description changed — infusion tables merge
+# by key, so as long as we restate every field, the merge is safe regardless
+# of whether it's a shallow or deep merge. Only the tables actually being
+# changed are included here; every other infusion (Restorative, Magical,
+# Likeable, Loveable, Fairy, and the four unique craftable=false sword
+# infusions) is left completely untouched.
+#
+# This is a standalone, static rebalance — there is no in-game menu for
+# adjusting these values (the modding format here is data-only; there's no
+# scripting/hook system to build custom UI with). If you want a different
+# strength, this mod is meant to be the "pick one variant" — duplicate this
+# file with different numbers as its own mod if you want another tier.
+
+[fortified]
+	color = [239, 81, 62, 255]
+	name = "Fortified"
+	description = "Base HP is increased by +10."
+	amount = 10
+	required_perk = "fortified_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_fortified"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_fortified"
+	supported_tags = ["armor"]
+
+[hasty]
+	color = [240, 141, 46, 255]
+	name = "Hasty"
+	description = "Increases movement speed by 10%."
+	percentage = 0.10
+	required_perk = "hasty_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_hasty"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_hasty"
+	supported_tags = ["armor"]
+
+[tireless]
+	color = [96, 231, 65, 255]
+	name = "Tireless"
+	description = "Base Stamina is increased by +10."
+	amount = 10
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_tireless"
+	required_perk = "tireless_blacksmithing"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_tireless"
+	supported_tags = ["armor"]
+
+[sharp]
+	color = [255, 161, 210, 255]
+	name = "Sharp"
+	description = "Grants an additional +3 Attack Power."
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_sharp"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_sharp"
+	required_perk = "sharp_blacksmithing"
+	supported_tags = ["weapon"]
+	amount = 3
+
+[leeching]
+	color = [255, 161, 210, 255]
+	name = "Leeching"
+	description = "Restores 3 HP each time it's used to damage a Monster."
+	required_perk = "leech_blacksmithing"
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_leeching"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_leeching"
+	supported_tags = ["weapon"]
+	amount = 3
+
+[lightweight]
+	color = [77, 246, 221, 255]
+	name = "Lightweight"
+	description = "Tools with this infusion occasionally drop Stamina orbs on use."
+	percentage = 25
+	sub_icon = "spr_ui_item_sub_infusion_blacksmith_lightweight"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_blacksmith_lightweight"
+	required_perk = "lightweight_blacksmithing"
+	supported_tags = ["axe", "hoe", "net", "pick_axe", "shovel", "watering_can"]
+
+[quality]
+	color = [255, 161, 210, 255]
+	name = "Quality"
+	description = "This furniture has 25% of its regular value as a bonus to its sale price."
+	sub_icon = "spr_ui_item_sub_infusion_craft_quality"
+	required_perk = "quality_crafting"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_craft_quality"
+	supported_tags = ["furniture"]
+	amount = 25
+
+[speedy]
+	color = [240, 141, 46, 255]
+	name = "Speedy"
+	description = "Grants a +25% to movement speed for two hours."
+	duration_hours = 2
+	percentage = 1.25
+	required_perk = "speedy_cooking"
+	sub_icon = "spr_ui_item_sub_infusion_cook_speedy"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_cook_speedy"
+	supported_tags = ["food"]
+
+[stacking_speed]
+	color = [240, 141, 46, 255]
+	name = "Speedy"
+	description = "Increases your speed by 12% for 6 hours."
+	duration_hours = 6
+	amount = 0.12
+	required_perk = "speedy_cooking"
+	sub_icon = "spr_ui_item_sub_infusion_cook_speedy"
+	tooltip_icon = "spr_ui_tooltip_infusion_icon_cook_speedy"
+	supported_tags = ["food"]

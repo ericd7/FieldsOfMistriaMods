@@ -1,0 +1,4 @@
+name = "Infusion Boost"
+author = "Eric Dodds"
+version = "1.0.0"
+minInstallerVersion = "0.15.10"
